@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#app {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10rem;
+}
+
+#generateBtn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#generateBtn:hover {
+  background-color: #0056b3;
+}
+
+#numberContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* space between numbers */
+}
+
+.random-number {
+  display: inline-flex;
+  margin: 0;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
