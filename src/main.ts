@@ -3,11 +3,13 @@ function getRandomNumber(min: number = 5, max: number = 40): number {
 }
 
 function generateRandomNumbers(count: number): number[] {
-  const numbers: number[] = [];
-  for (let i = 0; i < count; i++) {
-    numbers.push(getRandomNumber());
+  const numbers: Set<number> = new Set();
+
+  while (numbers.size < count) {
+    numbers.add(getRandomNumber());
   }
-  return numbers;
+
+  return Array.from(numbers);
 }
 
 function displayRandomNumbers() {
@@ -17,7 +19,7 @@ function displayRandomNumbers() {
   // Clear the container before adding new numbers
   numberContainer.innerHTML = "";
 
-  // Generate 6 random numbers
+  // Generate 6 unique random numbers
   const randomNumbers = generateRandomNumbers(6);
 
   // Create and display the numbers
